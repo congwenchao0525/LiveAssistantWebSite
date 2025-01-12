@@ -1,0 +1,65 @@
+/* 设置用于打开和关闭手风琴panel的按钮样式 */
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/* 设置用于打开和关闭手风琴panel的按钮样式 */
+.accordionChild {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+/*
+添加图标：
+在每个按钮上添加一个符号，以指示可折叠内容是打开的还是关闭的 
+*/
+.accordion:after {
+  content: "\02795"; /* 加号（+）的Unicode字符 */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* “减号（-）的Unicode字符 */
+}
+
+/* 如果单击该按钮（使用JS添加.active类），并且当您将鼠标移到该按钮上时（悬停），请为其添加背景色 */
+.active,
+.accordion:hover {
+  background-color: white;
+}
+
+/* 设置手风琴panel的样式。注意：默认情况下隐藏 */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+iframe11 {
+      width: 100%;         /* 使 iframe 宽度填满父容器 */
+      height: 100%;        /* 使 iframe 高度填满父容器 */
+      border: none;        /* 去掉默认边框 */
+      position: absolute;  /* 确保 iframe 覆盖父容器 */
+      top: 0;              /* 将 iframe 顶部对齐 */
+      left: 0;             /* 将 iframe 左侧对齐 */
+    }
