@@ -12,6 +12,29 @@
   transition: 0.4s;
 }
 
+
+/*
+添加图标：
+在每个按钮上添加一个符号，以指示可折叠内容是打开的还是关闭的 
+*/
+.accordion:after {
+  content: "\02795"; /* 加号（+）的Unicode字符 */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2796"; /* “减号（-）的Unicode字符 */
+}
+
+/* 如果单击该按钮（使用JS添加.active类），并且当您将鼠标移到该按钮上时（悬停），请为其添加背景色 */
+.accordion.active,
+.accordion:hover {
+  background-color: white;
+}
+
 /* 设置用于打开和关闭手风琴panel的按钮样式 */
 .accordionChild {
   background-color: white;
@@ -25,28 +48,12 @@
   font-size: 15px;
   transition: 0.4s;
 }
-/*
-添加图标：
-在每个按钮上添加一个符号，以指示可折叠内容是打开的还是关闭的 
-*/
-.accordion:after {
-  content: "\02795"; /* 加号（+）的Unicode字符 */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* “减号（-）的Unicode字符 */
-}
-
-/* 如果单击该按钮（使用JS添加.active类），并且当您将鼠标移到该按钮上时（悬停），请为其添加背景色 */
-.active,
-.accordion:hover {
-  background-color: white;
-}
-
+.accordionChild.active {
+      color: red; /* 激活状态下的文字颜色 */
+    }
+.accordionChild.active:after {
+      color: red; /* 激活状态下的文字颜色 */
+    }
 /* 设置手风琴panel的样式。注意：默认情况下隐藏 */
 .panel {
   padding: 0 18px;

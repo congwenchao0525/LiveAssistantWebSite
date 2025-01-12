@@ -8,11 +8,10 @@
   <head>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="野葱视频转换器是一款快速、高效、多功能的视频转换、音频转换和视频处理软件，支持批量操作、多种格式、高质量转换等特点，帮助您轻松实现各种媒体文件格式转换和处理，免费下载" />
-    <meta name="keywords" content="野葱视频转换器、视频转换、音频转换、视频压缩、视频加水印、批量转换、多格式支持、转换速度快、高质量转换" />
+    <title>Live Assistant-</title>
+    <meta name="description" content="LiveAssistant is a professional TikTok livestream management tool designed for managing games during livestreams, automating music and audio playback, recording gifts, generating reports, and more—all in one platform for seamless management." />
+    <meta name="keywords" content="LiveAssistant、TikTok、livestream" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>快速上手1：下载安装</title>
-    <meta name="next-head-count" content="6" />
     <link rel="preload" href="css/243b0637e81ce9fc.css" as="style" />
     <link rel="stylesheet" href="css/243b0637e81ce9fc.css" data-n-g="" />
 	  <link rel="preload" href="css/help.css" as="style" />
@@ -38,8 +37,8 @@
 				<nav class="_navLinks_t2cnm_4">
 					<a class="_navLinkItem_t2cnm_11" href="index.html">Home</a>
 					<a class="_navLinkItem_t2cnm_11" href="download.html">Download</a>
-					<a class="_navLinkItem_t2cnm_11" href="download.html">Buy</a>
-					<a class="_navLinkItem_t2cnm_11" href="help.html">Help</a>
+					<a class="_navLinkItem_t2cnm_11" href="buy.html">Buy</a>
+					<a class="_navLinkItem_t2cnm_11" href="help.html">How to Use</a>
 					<a class="_navLinkItem_t2cnm_11" href="about.html">About</a>
 				</nav>
 			</div>
@@ -50,8 +49,8 @@
             <div style="height:calc(100vh - 88px);top:88px" class="_CatalogSidebar_1hk7k_1">
               <button class="accordion">第 1 节</button>
 				<div class="panel">
-					<button class="accordionChild" onclick="loadContent('https://shipin.yecong.com/')">节点 1-1</button>
-					<button class="accordionChild" onclick="loadContent('https://shipin.yecong.com/')">节点 1-2</button>
+					<button class="accordionChild" onclick="loadContent('help/help1-1.html')">节点 1-1</button>
+					<button class="accordionChild" onclick="loadContent('help/help1-2.html')">节点 1-2</button>
 					
 				</div>
 
@@ -65,8 +64,8 @@
 				  <p>内容描述...</p>
 				</div>
             </div>
-            <div class="_contentView_14aaj_6">
-              <iframe id="contentFrame" class="_contentView_14aaj_6" src="page1.html"></iframe>
+            <div class="_contentView_14aaj_6" style="background-color: white">
+				<iframe id="contentFrame" src="help/help1-1.html" style="width: 100%; height: 100%; border: none;"></iframe>
             </div>
           </div>
         </div>
@@ -144,5 +143,20 @@
       iframe.src = page;
     }
 	</script>
+	<script>
+    // 获取所有按钮
+    const buttons = document.querySelectorAll('.accordionChild');
+
+    // 为每个按钮添加点击事件监听器
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // 移除其他按钮的激活状态
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // 为当前点击的按钮添加激活状态
+        button.classList.add('active');
+      });
+    });
+  </script>
   </body>
   <!-- Mirrored from shipin.yecong.com/help by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Jan 2025 17:36:59 GMT --></html>
