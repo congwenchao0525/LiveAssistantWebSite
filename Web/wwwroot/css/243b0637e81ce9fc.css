@@ -26178,7 +26178,11 @@ button.swiper-pagination-bullet {
 ._titleCard_5ugud_1._center_5ugud_5 {
     align-items: center
 }
-
+._titleCard_5ugud_1._center_5ugud_5_all {
+    align-items: center;
+	justify-content:center;
+	
+}
 ._titleCard_5ugud_1 ._titleWrap_5ugud_8 {
     display: flex;
     flex-direction: column;
