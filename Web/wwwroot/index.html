@@ -1752,9 +1752,14 @@
 			dots.eq(activeIndex).addClass('slick-active');
 		}
 
-		// 监听 Slick 的切换事件
-		$('.slick-list').on('afterChange', function(event, slick, currentSlide) {
-			updateDotsStyle(currentSlide);
+		// // 监听 Slick 的切换事件
+		// $('.slick-list').on('afterChange', function(event, slick, currentSlide) {
+		// 	updateDotsStyle(currentSlide);
+		// });
+
+		// 在切换开始前更新样式
+		$('.slick-list').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+			updateDotsStyle(nextSlide);
 		});
 
 		// 初始化第一个 dot 的状态
