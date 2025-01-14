@@ -18,6 +18,8 @@
 		<link rel="preload" href="css/70021e376e07766c.css" as="style" />
 		<link rel="stylesheet" href="css/70021e376e07766c.css" data-n-p="" />
 		<noscript data-n-css=""></noscript>
+		<style>
+		</style>
 	</head>
 
 	<body>
@@ -42,27 +44,26 @@
 							</nav>
 						</div>
 					</div>
-					<div class="_space_4doy7_10"> </div>
+					<div class="_space_4doy7_10"> </div>
 				</div>
 				<div class="index_homeView__oTzMp" style="min-height:480px">
-					<div class="ant-space css-h2001h ant-space-vertical _titleCard_5ugud_1 _fix_5ugud_1"
-						style="background-size: cover; background-image: url(images/backgroundImage.png); display: none;">
-						<div class="_rowClass_t2cnm_71 index_bannerWrap__A47IR">
-							<div class="index_left__9_Gwb">
-								<h3 class="index_title__qVQRs">Live Assisatant</h3>
-								<h3 class="index_title__qVQRs">Born for livestreams</h3>
-								<p class="index_subTitle__sfZ5L">A professional livestreaming tool for gift allocation
-									and statistics, commission calculation, and continuously updated games.</p>
-								<a data-agl-cvt="6" id="360-ocpc"
-									class="download_downloadBtn__kdRkm download_light__aWshO"
-									href="http://update.liveassistant.org:8001/update/ttprank/Files/liveassistant.exe"
-									style="cursor: pointer; text-decoration: none;"><i
-										style="width:36px;height:36px;background-size:cover;background-image:url(images/icon_win_dark.png)"></i><span>Download</span></a>
-								<p class="index_desc__niQfl"> Supports Windows 32/64-bit    Last Updated: 2025/8/25 </p>
-								<p class="index_desc__niQfl">English/ภาษาไทย/Tiếng Việt</p>
-							</div>
-							<img src="images/Home/banner.png" width="658" height="496" />
+					<div class="ant-space css-h2001h ant-space-vertical _titleCard_5ugud_1 _fix_5ugud_1" <div
+						class="_space_4doy7_10"> </div>
+					<div class="_rowClass_t2cnm_71 index_bannerWrap__A47IR">
+						<div class="index_left__9_Gwb">
+							<h3 class="index_title__qVQRs">Live Assisatant</h3>
+							<h3 class="index_title__qVQRs">Born for livestreams</h3>
+							<p class="index_subTitle__sfZ5L">A professional livestreaming tool for gift allocation
+								and statistics, commission calculation, and continuously updated games.</p>
+							<a data-agl-cvt="6" id="360-ocpc" class="download_downloadBtn__kdRkm download_light__aWshO"
+								href="http://update.liveassistant.org:8001/update/ttprank/Files/liveassistant.exe"
+								style="cursor: pointer; text-decoration: none;"><i
+									style="width:36px;height:36px;background-size:cover;background-image:url(images/icon_win_dark.png)"></i><span>Download</span></a>
+							<p class="index_desc__niQfl"> Supports Windows 32/64-bit Last Updated: 2025/8/25 </p>
+							<p class="index_desc__niQfl">English/ภาษาไทย/Tiếng Việt</p>
 						</div>
+						<img src="images/Home/banner.png" width="658" height="496" />
+						<p class="index_desc__niQfl"> Supports Windows 32/64-bit    Last Updated: 2025/8/25 </p>
 						<div class="ant-space-item"> </div>
 					</div>
 					<div class="_rowClass_t2cnm_71 index_bannerWrap__A47IR"
@@ -1630,11 +1631,6 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script>
-		$('.slick-list').slick({
-			autoplay: true,
-			dots: true,
-			dotsClass: 'slick-dots',
-		});
 		swiper1 = new Swiper('.swiper', {
 			observer: true,
 			observeParents: true,
@@ -1649,5 +1645,38 @@
 				reverseDirection: false,
 			},
 		});
+
+		// 初始化 Slick
+		$('.slick-list').slick({
+			autoplay: true,
+			dots: false,
+			speed: 500,
+			autoplaySpeed: 3000
+		});
+
+		// 获取所有自定义 dot 元素
+		const dots = $('.slick-dots li');
+
+		// 为每个 dot 添加点击事件
+		dots.each(function(index) {
+			$(this).on('click', function() {
+				$('.slick-list').slick('slickGoTo', index);
+				updateDotsStyle(index);
+			});
+		});
+
+		// 更新 dots 样式的函数
+		function updateDotsStyle(activeIndex) {
+			dots.removeClass('slick-active');
+			dots.eq(activeIndex).addClass('slick-active');
+		}
+
+		// 监听 Slick 的切换事件
+		$('.slick-list').on('afterChange', function(event, slick, currentSlide) {
+			updateDotsStyle(currentSlide);
+		});
+
+		// 初始化第一个 dot 的状态
+		updateDotsStyle(0);
 	</script>
 </html>
